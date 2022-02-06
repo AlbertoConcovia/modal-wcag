@@ -1,4 +1,6 @@
 import "./styles.css";
+import Modal from "./Modal";
+
 /* 
 Interview Task::
 
@@ -27,10 +29,13 @@ the test runner is in a tab on the right
 */
 
 export default function App() {
+  const someData = "Accessible Modal";
+
   return (
     <div className="App">
       <h1>NewDay</h1>
       <h2>Let’s see a modal</h2>
+      <Modal someData={someData} />
     </div>
   );
 }

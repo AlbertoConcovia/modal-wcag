@@ -35,6 +35,7 @@ export default function App() {
     <div className="App">
       <h1>NewDay</h1>
       <h2>Let’s see a modal</h2>
+      {/* I call Modal Component and send it some data by props */}
       <Modal someData={someData} />
     </div>
   );

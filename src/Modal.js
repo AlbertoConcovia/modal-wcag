@@ -2,11 +2,12 @@ import "./modal.css";
 import React from "react";
 
 const Modal = ({ someData }) => {
+  // When Click Open Modal button I display the Modal
   const btnOnclick = () => {
     var modal = document.getElementById("modalId");
     modal.style.display = "block";
   };
-
+  // When Click Open Modal button I change the display=none
   const btnOnclose = () => {
     var modal = document.getElementById("modalId");
     modal.style.display = "none";
@@ -14,6 +15,7 @@ const Modal = ({ someData }) => {
 
   return (
     <div data-testid="idModal">
+      {/* open modal button */}
       <button
         aria-label="open modal"
         role="button"

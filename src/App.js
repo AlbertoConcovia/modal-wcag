@@ -1,8 +1,6 @@
 import "./styles.css";
-
-/*
-
-Interview Task:
+/* 
+Interview Task::
 
 Create a WCAG 2.1 AA Compliant Modal
 

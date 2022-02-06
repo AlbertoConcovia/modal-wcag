@@ -9,10 +9,10 @@ describe("<Modal /> Tests", () => {
     expect(idModal).toBeTruthy();
   });
 
-  test("When clicking the button Modal should be rendered", () => {
+  test("When clicking the button Open Modal should be rendered", () => {
     render(<Modal someData="Accessible Modal" />);
-    const button = screen.getByTestId("idModalBtnOpenModal");
-    fireEvent.click(button);
+    const buttonOpenModal = screen.getByTestId("idModalBtnOpenModal");
+    fireEvent.click(buttonOpenModal);
     expect(screen.getByText("Accessible Modal")).toBeInTheDocument();
   });
 });

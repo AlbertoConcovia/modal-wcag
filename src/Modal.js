@@ -24,6 +24,7 @@ const Modal = ({ someData }) => {
       >
         Open Modal
       </button>
+      {/* WCAG: I use tabindex, aria-label and role */}
       <div id="modalId" className="modal">
         <div className="modal__content">
           <span

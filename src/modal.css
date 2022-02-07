@@ -1,6 +1,6 @@
 :root {
   --bg-color-blue: rgb(4, 10, 68);
-  --bg-color-blue-hover: rgb(10, 20, 114);
+  --bg-color-blue-hover: rgb(17, 28, 134);
   --modal-content-bg-color: white;
   --modal-content-width: 80%;
   --modal-content-max-width: 500px;
@@ -82,7 +82,18 @@
   border-color: grey;
   margin: 1%;
 }
-.modal__button--close:hover {
+
+.modal__button--close:hover,
+.modal__button--close:focus {
   background-color: var(--bg-color-blue-hover);
   cursor: pointer;
+}
+
+.modal__fieldset--input {
+  display: table-cell;
+  width: 98%;
+  margin-bottom: 2%;
+}
+.modal__fieldset--label {
+  display: table-cell;
 }

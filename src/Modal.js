@@ -2,12 +2,17 @@ import "./modal.css";
 import React from "react";
 
 const Modal = ({ someData }) => {
-  // When Click Open Modal button I display the Modal
-  const btnOnclick = () => {
+  {
+    /* When Click Open Modal button I display the Modal */
+  }
+  const btnOpenModalOnclick = () => {
     var modal = document.getElementById("modalId");
     modal.style.display = "block";
   };
-  // When Click Open Modal button I change the display=none
+
+  {
+    /* When Click Open Modal button I change the display=none */
+  }
   const btnOnclose = () => {
     var modal = document.getElementById("modalId");
     modal.style.display = "none";
@@ -19,43 +24,75 @@ const Modal = ({ someData }) => {
       <button
         aria-label="open modal"
         role="button"
+        data-testid="idModalBtnOpenModal"
         className="modal__button--open"
-        onClick={btnOnclick}
+        onClick={btnOpenModalOnclick}
       >
         Open Modal
       </button>
-      {/* WCAG: I use tabindex, aria-label and role */}
+      {/* Modal */}
       <div id="modalId" className="modal">
         <div className="modal__content">
           <span
-            tabIndex="6"
+            tabIndex="5"
             aria-label="close modal"
             onClick={btnOnclose}
             className="close"
           >
             &times;
           </span>
-          <header tabIndex="1" className="modal__content--header">
-            {" "}
-            Modal
-          </header>
+          <header className="modal__content--header"> Modal</header>
           <article>
-            <p tabIndex="2" aria-label="accessible modal">
-              {" "}
-              {someData}{" "}
-            </p>
-            <p tabIndex="3" aria-label="some information about data 2">
-              {" "}
-              some information 2{" "}
-            </p>
-            <p tabIndex="4" aria-label="some information about data 3">
-              {" "}
-              some information 3{" "}
-            </p>
+            <p aria-label="some information about data 3">{someData}</p>
+            <fieldset className="modal__fieldset">
+              <legend>Some Details</legend>
+              <label
+                for="detailsName"
+                aria-label="Name"
+                className="modal__fieldset--label"
+              >
+                Name:
+              </label>
+              <input
+                id="detailsName"
+                tabIndex="1"
+                type="text"
+                name="detailsName"
+                className="modal__fieldset--input"
+              />{" "}
+              <label
+                for="detailsLastName"
+                aria-label="Last name"
+                className="modal__fieldset--label"
+              >
+                Last name:
+              </label>
+              <input
+                id="detailsLastName"
+                tabIndex="2"
+                type="text"
+                name="detailsLastName"
+                className="modal__fieldset--input"
+              />{" "}
+              <label
+                for="detailsCompany"
+                aria-label="Company"
+                className="modal__fieldset--label"
+              >
+                Company:
+              </label>
+              <input
+                id="detailsCompany"
+                tabIndex="3"
+                type="text"
+                name="detailsCompany"
+                className="modal__fieldset--input"
+              />{" "}
+            </fieldset>
           </article>
           <footer>
             <button
-              tabIndex="5"
+              tabIndex="4"
               aria-label="close modal"
               role="button"
               className="modal__button--close"

@@ -23,9 +23,7 @@ describe("<Modal /> Tests", () => {
 
   test("When clicking the button Close Should be call correct Function", () => {
     const btnOnclose = jest.fn();
-    const { getByLabelText, getByText } = render(
-      <Modal someData="Accessible Modal" btnOnclose={btnOnclose} />
-    );
+    render(<Modal someData="Accessible Modal" btnOnclose={btnOnclose} />);
     const button = screen.getByTestId("idModalBtnCloseModal");
     fireEvent.click(button);
     expect(btnOnclose).toHaveBeenCalled();

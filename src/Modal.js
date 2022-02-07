@@ -1,21 +1,11 @@
 import "./modal.css";
 import React from "react";
 
-const Modal = ({ someData }) => {
-  {
-    /* When Click Open Modal button I display the Modal */
-  }
+const Modal = ({ someData, btnOnclose }) => {
+  // When Click Open Modal button I display the Modal
   const btnOpenModalOnclick = () => {
     var modal = document.getElementById("modalId");
     modal.style.display = "block";
-  };
-
-  {
-    /* When Click Open Modal button I change the display=none */
-  }
-  const btnOnclose = () => {
-    var modal = document.getElementById("modalId");
-    modal.style.display = "none";
   };
 
   return (
@@ -92,6 +82,7 @@ const Modal = ({ someData }) => {
           </article>
           <footer>
             <button
+              data-testid="idModalBtnCloseModal"
               tabIndex="4"
               aria-label="close modal"
               role="button"

@@ -1,5 +1,5 @@
 import "./styles.css";
-import Modal from "./Modal";
+import Modal from "./modal/Modal";
 
 /* 
 Interview Task::

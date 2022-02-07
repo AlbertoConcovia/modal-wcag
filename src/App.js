@@ -31,12 +31,19 @@ the test runner is in a tab on the right
 export default function App() {
   const someData = "Accessible Modal";
 
+  // When Click Open Modal button I change the display=none
+  const btnOnclose = () => {
+    var modal = document.getElementById("modalId");
+    modal.style.display = "none";
+  };
+
   return (
     <div className="App">
       <h1>NewDay</h1>
       <h2>Let’s see a modal</h2>
       {/* I call Modal Component and send it some data by props */}
-      <Modal someData={someData} />
+      {/* I pass the function btnOnclose by props so that it is scalable */}
+      <Modal someData={someData} btnOnclose={btnOnclose} />
     </div>
   );
 }
